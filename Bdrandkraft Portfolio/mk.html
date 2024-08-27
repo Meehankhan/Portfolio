@@ -1,0 +1,356 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Business Page</title>
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css">
+    <style>
+        .vector {
+            background: url(/assests/images/Vector.png);
+            background-repeat: no-repeat;
+            background-size: cover;
+            padding: 110px 0 150px 0;
+            margin: 0;
+        }
+        .business {
+            display: flex;
+            justify-content: space-between;
+            align-items: center;
+            max-width: 1200px;
+            margin: 0 auto;
+            padding: 0;
+            gap: 40px;
+        }
+        .left-section-business {
+            flex: 1;
+            display: flex;
+            justify-content: center;
+        }
+        .left-section-business img {
+            width: 100%;
+            max-width: 300px;
+            padding: 10px;
+            display: inline-block;
+            animation: upDown 1.5s ease-in-out infinite;
+        }
+
+        @keyframes upDown {
+            0% { transform: translateY(0); }
+            50% { transform: translateY(-20px); }
+            100% { transform: translateY(0); }
+        }
+
+        .right-section-business {
+            flex: 1;
+            display: flex;
+            justify-content: center;
+            align-items: flex-start;
+            gap: 20px;
+            flex-direction: column;
+            background-color: transparent;
+        }
+        .right-section-business h1 {
+            font-size: 3.5rem;
+            width: 80%;
+            background-color: transparent;
+            color: #000;
+            margin: 0;
+        }
+        .right-section-business p {
+            font-size: 1.5rem;
+            width: 80%;
+            background-color: transparent;
+            color: #000;
+            margin: 0;
+        }
+        .get-in-touch {
+            display: flex;
+            align-items: center;
+            gap: 20px;
+            background-color: transparent;
+            color: #000;
+            flex-wrap: wrap;
+        }
+        .get-in-touch button {
+            padding: 12px 40px;
+            background-color: black;
+            color: #cbfe47;
+            border: none;
+            border-radius: 50px;
+            cursor: pointer;
+            font-weight: bold;
+            transition: background-color 0.3s ease, box-shadow 0.3s ease;
+            text-transform: capitalize;
+        }
+        .get-in-touch button:hover {
+            background-color: #cbfe47;
+            color: #000;
+            transform: scale(1.1);
+            transition: all ease 0.2s;
+        }
+        .get-in-touch .social-links {
+            display: flex;
+            gap: 10px;
+        }
+        .get-in-touch .social-links a {
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            width: 40px;
+            height: 40px;
+            border-radius: 50%;
+            background-color: #000;
+            color: #cbfe47;
+            text-decoration: none;
+            transition: background-color 0.3s ease, color 0.3s ease, transform 0.3s ease;
+        }
+        .get-in-touch .social-links a:hover {
+            background-color: #cbfe47;
+            color: #000;
+            transform: scale(1.1);
+        }
+
+        .footer {
+            display: flex;
+            justify-content: space-between;
+            align-items: flex-start;
+            padding: 60px 40px;
+            color: #fff;
+        }
+        .footer .left-side5 {
+            flex: 1;
+            margin-right: 20px;
+        }
+        .footer .footer-img img {
+            width: 120px;
+        }
+        .footer .footer-img p {
+            margin-top: 20px;
+            line-height: 1.6;
+            font-size: 15px;
+            color: #dcdcdc;
+            max-width: 300px;
+        }
+        .footer .social-links {
+            margin-top: 25px;
+            display: flex;
+            gap: 20px;
+        }
+        .footer .social-links a {
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            width: 50px;
+            height: 50px;
+            border-radius: 50%;
+            background-color: #000;
+            color: #6e8efb;
+            border: 2px solid white;
+            text-decoration: none;
+            transition: background-color 0.3s ease, color 0.3s ease, transform 0.3s ease;
+        }
+        .footer .social-links a:hover {
+            background-color: #9edc29;
+            color: #fff;
+            transform: scale(1.2);
+        }
+        .footer .social-links i {
+            font-size: 20px;
+        }
+        .footer .footer-btn {
+            padding: 12px 40px;
+            background-color: #cbfe47;
+            color: black;
+            border: none;
+            border-radius: 50px;
+            cursor: pointer;
+            font-weight: bold;
+            transition: background-color 0.3s ease, box-shadow 0.3s ease;
+        }
+        .footer .footer-btn:hover {
+            background-color: #9edc29;
+            box-shadow: 0 4px 10px rgba(203, 254, 71, 0.4);
+        }
+        .footer-nav {
+            flex: 1;
+            text-align: center;
+        }
+        .footer-nav1 {
+            flex: 1;
+            text-align: right;
+        }
+        .footer-nav ul, .footer-nav1 ul {
+            display: flex;
+            flex-direction: column;
+            list-style: none;
+            padding: 0;
+        }
+        .footer-nav h1, .footer-nav1 h1 {
+            font-size: 22px;
+            margin-bottom: 20px;
+            text-transform: uppercase;
+            font-weight: bold;
+            color: #9edc29;
+        }
+        .footer-nav ul li, .footer-nav1 ul li {
+            margin-bottom: 12px;
+            font-size: 15px;
+        }
+        .footer-nav ul li:before, .footer-nav1 ul li:before {
+            content: "•";
+            color: #cbfe47;
+            padding-right: 10px;
+        }
+        .footer-nav ul p, .footer-nav1 ul li {
+            font-size: 15px;
+            color: #eee;
+        }
+        .footer-nav1 ul li:hover {
+            color: #ffe500;
+            cursor: pointer;
+        }
+
+        /* Responsive styles */
+        @media (max-width: 992px) {
+            .business {
+                flex-direction: column;
+                align-items: center;
+            }
+            .left-section-business, .right-section-business {
+                width: 100%;
+            }
+            .right-section-business {
+                text-align: center;
+                margin-top: 30px;
+                align-items: center;
+            }
+            .get-in-touch {
+                justify-content: center;
+            }
+        }
+
+        @media (max-width: 768px) {
+            .vector {
+                padding: 60px 0;
+            }
+            .right-section-business h1 {
+                font-size: 2rem;
+            }
+            .right-section-business p {
+                font-size: 1.1rem;
+            }
+            .footer {
+                flex-direction: column;
+                align-items: center;
+                text-align: center;
+                padding: 40px 20px;
+            }
+            .footer .left-side5 {
+                margin-right: 0;
+                margin-bottom: 30px;
+            }
+            .footer-nav, .footer-nav1 {
+                margin-bottom: 30px;
+                text-align: center;
+            }
+            .footer .social-links {
+                justify-content: center;
+            }
+        }
+
+        @media (max-width: 576px) {
+            .vector {
+                padding: 40px 0;
+            }
+            .business {
+                padding: 0 20px;
+            }
+            .left-section-business img {
+                max-width: 200px;
+            }
+            .right-section-business h1 {
+                font-size: 1.8rem;
+            }
+            .right-section-business p {
+                font-size: 1rem;
+            }
+            .get-in-touch {
+                flex-direction: column;
+                gap: 15px;
+            }
+            .footer .footer-img img {
+                width: 100px;
+            }
+            .footer .social-links {
+                flex-wrap: wrap;
+            }
+            .footer .footer-btn {
+                width: 100%;
+                margin-bottom: 15px;
+            }
+        }
+    </style>
+</head>
+<body>
+    <div class="vector">
+        <div class="business">
+            <div class="left-section-business">
+                <img src="/assests/images/Vector1.png" alt="" />
+            </div>
+            <div class="right-section-business">
+                <h1>have a business? let's get in touch</h1>
+                <p>
+                    Lorem ipsum dolor sit amet consectetur adipisicing elit.
+                    Repellat quisquam, hic eum obcaecati dolores laborum?
+                </p>
+                <div class="get-in-touch">
+                    <button>get in touch</button>
+                    <div class="social-links">
+                        <a href="#" aria-label="Facebook" title="Facebook"><i class="fab fa-facebook-f"></i></a>
+                        <a href="#" aria-label="Twitter" title="Twitter"><i class="fab fa-twitter"></i></a>
+                        <a href="#" aria-label="LinkedIn" title="LinkedIn"><i class="fab fa-linkedin-in"></i></a>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </div>
+    <footer class="footer">
+        <div class="left-side5">
+            <div class="footer-img">
+                <img src="/assests/images/Vector6.png" alt="Company Logo" />
+                <p>
+                    Lorem ipsum dolor sit amet consectetur adipisicing elit. Voluptatem ab fuga inventore autem quisquam adipisci! 
+                    Reprehenderit, dicta maiores. Cupiditate, quidem.
+                </p>
+            </div>
+            <div class="social-links">
+                <input type="submit" class="footer-btn" value="Get in Touch" />
+                <a href="#" aria-label="Facebook" title="Facebook"><i class="fab fa-facebook-f"></i></a>
+                <a href="#" aria-label="Twitter" title="Twitter"><i class="fab fa-twitter"></i></a>
+                <a href="#" aria-label="LinkedIn" title="LinkedIn"><i class="fab fa-linkedin-in"></i></a>
+            </div>
+        </div>
+        <nav class="footer-nav">
+            <ul>
+                <h1>Contact Me</h1>
+                <li>Email:</li>
+                <p>meehankhan74@gmail.com</p>
+                <li>Phone:</li>
+                <p>+923000755542</p>
+                <li>Address:</li>
+                <p>Pakistan Sindh Nawabshah (SBA)</p>
+            </ul>
+        </nav>
+        <nav class="footer-nav1">
+            <ul>
+                <h1>Pages</h1>
+                <li>Home</li>
+                <li>Our Team</li>
+                <li>Contact</li>
+                <li>Portfolio</li>
+            </ul>
+        </nav>
+    </footer>
+</body>
+</html>
